@@ -114,13 +114,27 @@
 // let age = prompt('скільки тобі років?');
 // // Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
 // console.log('Вітаю'+ ' '+ name + ' ' + secondName + '. ' + 'Тобі ' + age + ' років.');
-// // Взяти змінні з завдання вище та зєднати їх в одну змінну (конкатинація).
+// // Взяти змінні з завдання вище та з'єднати їх в одну змінну (конкатинація).
 // let obyednanaZminna = name + secondName + age; // я правильно зрозумів умову задачі?
-// За допомогою prompt() отримати 3 числа. Привести їх до числа (Google "String to number JS"). Вивести їх в консоль.
-let num1 = +prompt('перше число?')
-let num2 = +prompt('друге число?')
-let num3 = +prompt('третє число?')
-console.log(num1)
-console.log(num2)
-console.log(num3)
-console.log(typeof num2)
+// // За допомогою prompt() отримати 3 числа. Привести їх до числа (Google "String to number JS"). Вивести їх в консоль.
+// let num1 = +prompt('перше число?')
+// let num2 = +prompt('друге число?')
+// let num3 = +prompt('третє число?')
+// console.log(num1)
+// console.log(num2)
+// console.log(num3)
+// console.log(typeof num2)
+// // За допомогою prompt() отримати 4 числа. Привести їх до числа за допомогою parseInt. Додати їх всі мож собою і результат вивести в консоль.
+// let number1 = parseInt(prompt('перше число?'));
+// let number2 = parseInt(prompt('друге число?'));
+// let number3 = parseInt(prompt('третє число?'));
+// let number4 = parseInt(prompt('четверте число?'));
+// let sum = number1 + number2 + number3 + number4;
+// console.log(sum);
+// За допомогою prompt() отримати 3 числа з плаваючою точкою за допомогою parseFloat.
+let num1 = parseFloat(prompt('Перше число?'));
+let num2 = parseFloat(prompt('Друге число?'));
+let num3 = parseFloat(prompt('Третє число?'));
+// Просумувати їх. Отрманий результат записати в змінну result. Вивести цю змінну в консоль.
+let result = num1 + num2 + num3;
+console.log(result);
