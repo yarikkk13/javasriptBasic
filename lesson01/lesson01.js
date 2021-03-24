@@ -131,10 +131,55 @@
 // let number4 = parseInt(prompt('четверте число?'));
 // let sum = number1 + number2 + number3 + number4;
 // console.log(sum);
-// За допомогою prompt() отримати 3 числа з плаваючою точкою за допомогою parseFloat.
-let num1 = parseFloat(prompt('Перше число?'));
-let num2 = parseFloat(prompt('Друге число?'));
-let num3 = parseFloat(prompt('Третє число?'));
-// Просумувати їх. Отрманий результат записати в змінну result. Вивести цю змінну в консоль.
-let result = num1 + num2 + num3;
-console.log(result);
+// // За допомогою prompt() отримати 3 числа з плаваючою точкою за допомогою parseFloat.
+// let num1 = parseFloat(prompt('Перше число?'));
+// let num2 = parseFloat(prompt('Друге число?'));
+// let num3 = parseFloat(prompt('Третє число?'));
+// // Просумувати їх. Отрманий результат записати в змінну result. Вивести цю змінну в консоль.
+// let result = num1 + num2 + num3;
+// console.log(result);
+// // За допомогою prompt() отримати 3 числа з плаваючою точкою. Заокруглити їх (Google "round number JS"). Просумувати їх між собою. Результат вивести в консоль.
+// let num1 = Math.round(prompt('1 число?'));
+// let num2 = Math.round(prompt('2 число?'));
+// let num3 = Math.round(prompt('3 число?'));
+// let sum = num1 + num2 + num3;
+// console.log(sum);
+// // За допомогою prompt() отримати 2 цілих числа.
+// //   Перше число - це число яке будуть підносити до степеня. Друге число - це число яке являється степенню.
+// //   За допомогою Math.pow (Google) піднести перше число в степінь другого числа.
+// //   Example. Число 1 = 5. Число 2 = 2. Результат = 25
+// let n1 = Math.round(prompt('Введіть основу степеня:'));
+// let n2 = Math.round(prompt('Введіть показник степеня:'));
+// let paw = Math.pow(n1,n2);
+// console.log(paw);
+// // За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+// let a = 100; let b = '100'; let c = true;
+// console.log(typeof a);
+// console.log(typeof b);
+// console.log(typeof c);
+// Поставет відповідний оператор в виразах що б вийшов відповідний результат.
+//   В однакових виразаї не використовувати однакові оператори!!!
+//     5 ? 6 -> true
+//     5 ? 6 -> false
+//     5 ? 6 -> false
+//     5 ? 6 -> false
+//     10 ? 10 -> true
+//     10 ? 10 -> true
+//     10 ? 10 -> false
+//     10 ? 10 -> false
+//     10 ? 10 -> false
+//     123 ? '123' -> false
+//     123 ? '123' -> true
+console.log(5<6);
+console.log(5>6);
+console.log(5===6);
+console.log(5>=6);
+console.log(10>=10);
+console.log(10<=10);
+console.log(10>10);
+console.log(10<10);
+console.log(10!==10);
+console.log(123==='123');
+console.log(123=='123'); // не зрозумів що це таке Comparison 123=='123' may cause unexpected type coercion
+
+
