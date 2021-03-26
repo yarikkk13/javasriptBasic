@@ -119,7 +119,7 @@
 
 // // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
 // for (let i=1; i<=100; i++){
-//     if (i%2)continue
+//     if (i%2){continue}
 //     console.log(i);
 //     document.write(i + '<br/>');
 // }
@@ -152,23 +152,25 @@
 //     document.write(i + '<br/>');
 // }}
 
-// - Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
-for (let min=1; min<=2; min++){
-    for (let sec=0; sec<=59;sec++){
-        console.log('sec :',sec)
-    }
-    console.log('min :', min);
-}
+// // - Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
+// for (let min=1; min<=2; min++){
+//     for (let sec=0; sec<=59;sec++){
+//         console.log('sec :',sec)
+//     }
+//     console.log('min :', min);
+// }
 
 
 // - Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
 
-// for (let hours=1; hours<3;hours++){
-//     for (let min=1; min<60; min++){
-//         for (let sec=0;sec<60;sec++){
-//             console.log('sec:', sec)
-//         }
-//         console.log('min:', min)
-//     }
-//     console.log('hours:', hours)
-// }//як заставити ще порахувати 20 хвилин вообше не можу зрозуміти
+for (let hours=0; hours<3;hours++){
+    for (let min=0; min<60; min++){
+        for (let sec=0;sec<60;sec++){
+            console.log(`${hours}:${min}:${sec}`);
+            if (hours===2&& min===20&& sec===30){
+                min=60
+                break
+            }
+        }
+    }
+}//як заставити ще порахувати 20 хвилин вообше не можу зрозуміти
