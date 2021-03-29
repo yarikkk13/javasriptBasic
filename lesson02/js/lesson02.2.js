@@ -172,14 +172,21 @@
 //     if(arrNum[i]%2){continue}
 //     console.log(arrNum[i]);
 // }
-// 7. замінити кожне число кратне 3 на слово "okten"
+// // 7. замінити кожне число кратне 3 на слово "okten"
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// for (let i = 0; i < arrNum.length; i++) {
+//     if(arrNum[i]%3===0)
+//         arrNum[i]='okten';
+// }
+// console.log(arrNum)
+
+// 8. вивести масив в зворотньому порядку.
 let arrNum = [2,17,13,6,22,31,45,66,100,-18];
-for (let i = 0; i < arrNum.length; i++) {
-    if(arrNum[i]%3===0)
-        arrNum[i]='okten';
+for (let i = arrNum.length; i >= 0; i--) {
+console.log(arrNum[i])
 }
 console.log(arrNum)
-// 8. вивести масив в зворотньому порядку.
+
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
 // 10
 //  створити пустий масив та :
