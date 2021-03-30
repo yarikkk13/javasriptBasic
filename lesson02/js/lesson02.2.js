@@ -180,14 +180,69 @@
 // }
 // console.log(arrNum)
 
-// 8. вивести масив в зворотньому порядку.
-let arrNum = [2,17,13,6,22,31,45,66,100,-18];
-for (let i = arrNum.length; i >= 0; i--) {
-console.log(arrNum[i])
-}
-console.log(arrNum)
+// // 8. вивести масив в зворотньому порядку.
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// for (let i = arrNum.length-1; i >= 0; i--) {
+// console.log(arrNum[i])
+// }
+// console.log(arrNum)
 
-// 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+// // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+// // 1. перебрати його циклом while
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// let i=arrNum.length-1;
+// while (i>=0){
+//     console.log(arrNum[i]);
+//     i--
+// }
+
+// // 2. перебрати його циклом for
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// for (let i = arrNum.length-1; i >= 0; i--) {
+//     console.log(arrNum[i]);
+// }
+
+// // 3. перебрати циклом while та вивести  числа тільки з непарним індексом
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// let i=arrNum.length-1;
+// while (i>= 0){
+//     if(arrNum[i]%2!==0)
+//     console.log(arrNum[i]);
+//     i--
+// }
+
+// // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// for (let i = arrNum.length-1; i >= 0; i--) {
+//     if(arrNum[i]%2!==0)
+//     console.log(arrNum[i]);
+// }
+
+// // 5. перебрати циклом while та вивести  числа тільки парні  значення
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// let i=arrNum.length-1;
+// while (i >= 0){
+//     if(arrNum[i]%2===0)
+//     console.log(arrNum[i]);
+//     i--;
+// }
+
+// // 6. перебрати циклом for та вивести  числа тільки парні  значення
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// for (let i = arrNum.length-1; i >= 0; i--) {
+//     if(arrNum[i]%2){continue}
+//     console.log(arrNum[i]);
+// }
+
+// // 7. замінити кожне число кратне 3 на слово "okten"
+// let arrNum = [2,17,13,6,22,31,45,66,100,-18];
+// for (let i = arrNum.length-1; i >= 0; i--) {
+//     if(arrNum[i]%3===0)
+//         arrNum[i]='okten';
+//     console.log(arrNum[i]);
+// }
+// console.log(arrNum)
+
 // 10
 //  створити пустий масив та :
 // - заповнити його 50 парними числами за допомоги циклу.
