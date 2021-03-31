@@ -318,8 +318,15 @@
 // //   EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
 // let arrNum = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
 // for (let i = 0; i < arrNum.length; i++) {
-//     if(arrNum[i]%2===0){
+//     if(arrNum[i]%2===0 && i-1>=0){
 //         console.log(arrNum[i-1])
+//     }
+// }
+
+// let arrNum = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
+// for (let i = 0; i < arrNum.length; i++) {
+//     if(arrNum[i+1]%2===0){
+//         console.log(arrNum[i])
 //     }
 // }
 
