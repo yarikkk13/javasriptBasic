@@ -44,48 +44,78 @@
 // maxNumber(1423,34334,4234234);
 
 // // 5) створити функцію яка повертає найбільше число з масиву
-// let arrNum = [23, 323, 43434, 43439, 2323, 23232, 4435, 5434, 3];
-// function maxNum(array){
-//     let max = Math.max.apply(null, array)
-//     console.log(max)
+
+// function maxNum(array=[]){
+//     let max = array[0];
+//     for (let i = 1; i < array.length; i++) {
+//         if (max<array[i]){
+//             max = array[i];
+//         }
+//     }return max
 // }
-// maxNum(arrNum)
+// let arrNum = [23, 323, 43434, 43439, 2323, 23232, 4435, 5434, 3, 597060];
+// console.log(maxNum(arrNum))
 
 // // 6) створити функцію яка повертає найменьше число з масиву
-// function minNum(array){
-//     let min = Math.min.apply(null, array)
-//     console.log(min)
+
+// function minNum(array=[]){
+//     let min = array[array.length-1];
+//     for (let i = array.length-2; i >= 0; i--) {
+//         if (min>array[i]){
+//             min = array[i];
+//         }
+//     }return min
 // }
-// minNum(arrNum)
+// let arrNum = [23, 323, 43434, 43439, 2323, 23232, 4435, 5434, 3, 0, -3];
+// console.log(minNum(arrNum))
 
 // // 7) створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його.
 // let arrNum = [12, -12, 45, 0, 17, -17, 23, -23, 0];
 //
-// function summing(enterArray){
+// function summing(enterArray = []){
 //     let sum = 0;
-//     let arr = enterArray;
-//     for (let i = 0; i < arr.length; i++) {
-//         sum=sum+arr[i]
-//     }console.log(sum)
+//     for (let i = 0; i < enterArray.length; i++) {
+//         sum=sum+enterArray[i]
+//     }return sum
 // }
-// summing(arrNum);
+// console.log(summing(arrNum));
 
 
 // // 8) створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
 // let arrNum = [12, -12, 45, 0, 17, -17, 23, -23, 0];
 //
-// function arithmeticMean(enterArray){
+// function arithmeticMean(enterArray = []){
 //     let sum = 0;
-//     let arr = enterArray;
-//     for (let i = 0; i < arr.length; i++) {
-//         sum=sum+arr[i]
-//     }console.log(sum/arr.length)
+//     for (let i = 0; i < enterArray.length; i++) {
+//         sum=sum+enterArray[i]
+//     }return sum/enterArray.length
 // }
-// arithmeticMean(arrNum);
+// console.log(arithmeticMean(arrNum));
 
 // 9) Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 // EXAMPLE:
 // [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
+let arrObj = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+
+function objToKeys(enterArrayOfObjects = []) {
+    let returnArr = [];
+    for (const enterArrayOfObject of enterArrayOfObjects) {
+        for (let enterArrayOfObjectsKey in enterArrayOfObject) {
+            returnArr.push(enterArrayOfObjectsKey)
+            console.log(enterArrayOfObjectsKey)
+        }
+    }return returnArr
+}
+
+console.log(objToKeys(arrObj))
+
+
+// for (const arrObjElement of arrObj) {
+//     for (let arrObjElementKey in arrObjElement) {
+//         console.log(arrObjElementKey)
+//     }
+// }
+
 // 10) Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 // [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
@@ -153,3 +183,11 @@
 // 3) Flat
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
+
+
+
+
+
+
+
+

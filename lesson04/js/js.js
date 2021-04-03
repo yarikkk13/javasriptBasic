@@ -152,26 +152,25 @@
 // console.log(resulr);
 
 
-function argTest() {
-  let sun = 0
-  console.log(typeof arguments);
-
-  for (const argument of arguments) {
-    console.log(argument);
-    sun += argument
-  }
-
-  console.log(sun / arguments.length);
-}
-
+// function argTest() {
+//   let sun = 0
+//   console.log(typeof arguments);
+//
+//   for (const argument of arguments) {
+//     console.log(argument);
+//     sun += argument
+//   }
+//
+//   console.log(sun / arguments.length);
+// }
 // argTest(1, 6, 9, 2218, 8, 9, 0);
 // argTest(1);
-argTest(1, 9, 8, 0, 7, 6, -2, 9, 7, 88, 5678, 890, 724, 93);
+// argTest(1, 9, 8, 0, 7, 6, -2, 9, 7, 88, 5678, 890, 724, 93);
 
 
 
 
 
-let str = '   Harry      Potter      ' // Harry Potter
-let str = '   Hermiona      Volta      ' // Hermiona Volta
-let str = '   John      Doe      ' // John Doe
+// let str = '   Harry      Potter      ' // Harry Potter
+// let str = '   Hermiona      Volta      ' // Hermiona Volta
+// let str = '   John      Doe      ' // John Doe
