@@ -272,18 +272,66 @@
 
 
 // - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
-//
-// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+
+// let arrNum = [1, 0, 6, 7, 3];
+// function arrChangeI(arrIs = [], i = 0) {
+//     if (i >= arrIs.length - 1) {
+//         console.error(' не можливо визначити, введіть менше (і)')
+//     } else {
+//         let n = arrIs[i];
+//         arrIs[i] = arrIs[i + 1];
+//         arrIs[i + 1] = n;
+//         return arrIs
+//     }
+// }console.log(arrChangeI(arrNum, 6))
+
+// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву.
+// Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // Приклад
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
-//
+let arrNum = [1, 0, 6, 0, 3];
+
+function pushing0(array) {
+    const n = array.length - 1;
+    for (let i = 0; i < n; i++) {
+        console.log(array[i]);
+        if (array[i] === 0) {
+            array.push(111)
+        }
+    }
+    return array
+}
+
+let all0Pushed = pushing0(arrNum);
+console.log(all0Pushed)
+
+
 // - Дано список імен.
 // let n1 = '    Harry       Potter      '
 // let n2 = '    Ron       Whisley      '
 // let n3 = '    Hermione       Granger      '
+//
+// function normalizator (name){
+//     let normName = name.trim();
+//     name = normName.split(' ');
+//     normName = [name[0],name[name.length-1]];
+//     name = normName.join(' ');
+//     return name
+// }
+// console.log(normalizator(n1));
+// console.log(normalizator(n2));
+// console.log(normalizator(n3));
+
+
+// let harry = n1.trim();
+// n1 =harry.split(' ')
+// harry = [n1[0],n1[n1.length-1]]
+// n1 = harry.join(' ')
+// console.log(n1)
+
 // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
