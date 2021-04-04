@@ -233,9 +233,42 @@
 // - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
 //   Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
 
-
-
-
+// let arrObj = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+// function objToKeys(enterArrayOfObjects = []) {
+//     let returnArr = [];
+//     for (const enterArrayOfObject of enterArrayOfObjects) {
+//         for (let enterArrayOfObjectsKey in enterArrayOfObject) {
+//             returnArr.push(enterArrayOfObjectsKey)
+//         }
+//     }return returnArr
+// }
+//
+// function returnValues(arrayOfObjects = []) {
+//     let arrOfValuesArr = [];
+//     let arrOfvalues = [];
+//     let value;
+//     for (const arrObjElement of arrayOfObjects) {
+//         arrOfValuesArr.push(Object.values(arrObjElement))
+//     }
+//     for (const arrOfValue of arrOfValuesArr) {
+//         for (let arrOfValueElement of arrOfValue) {
+//             value = arrOfValueElement;
+//             arrOfvalues.push(value)
+//         }
+//     }return arrOfvalues
+// }
+//
+// function keysOrValues(array) {
+//     let key_or_value = prompt('Масив ключів(key) чи масив значень(value)?')
+//     if (key_or_value === 'key') {
+//         return objToKeys(array)
+//     } else if (key_or_value === 'value') {
+//         return returnValues(array)
+//     }
+// }
+//
+// console.log(keysOrValues(arrObj))
+// console.log(keysOrValues(arrObj))
 
 
 // - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
