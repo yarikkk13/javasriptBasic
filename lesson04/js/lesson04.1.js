@@ -292,22 +292,25 @@
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
-let arrNum = [1, 0, 6, 0, 3];
 
-function pushing0(array) {
-    const n = array.length - 1;
-    for (let i = 0; i < n; i++) {
-        console.log(array[i]);
-        if (array[i] === 0) {
-            array.push(111)
-        }
-    }
-    return array
-}
 
-let all0Pushed = pushing0(arrNum);
-console.log(all0Pushed)
-
+// let arrNum = [1, 0, 6, 0, 3];
+// let arrNum1 = [0,1,2,3,4];
+// let arrNum2 = [0,0,1,0];
+//
+// function pushing0(array) {
+//     const n = array.length - 1;
+//     for (let i = n; i >= 0; i--) {
+//         if (array[i] === 0) {
+//             array.splice(i,1)
+//             array.push(0)
+//         }
+//     }return array
+// }
+// console.log(pushing0(arrNum));
+// console.log(pushing0(arrNum1));
+// console.log(pushing0(arrNum2));
+//не зрозумів до чого в цій задачці довжина масиву вказана
 
 // - Дано список імен.
 // let n1 = '    Harry       Potter      '
