@@ -95,21 +95,23 @@
 // 9) Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 // EXAMPLE:
 // [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
-let arrObj = [{name: 'Dima', age: 13}, {model: 'Camry'}];
-
-function objToKeys(enterArrayOfObjects = []) {
-    let returnArr = [];
-    for (const enterArrayOfObject of enterArrayOfObjects) {
-        for (let enterArrayOfObjectsKey in enterArrayOfObject) {
-            returnArr.push(enterArrayOfObjectsKey)
-            console.log(enterArrayOfObjectsKey)
-        }
-    }return returnArr
-}
-
-console.log(objToKeys(arrObj))
 
 
+// let arrObj = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+//
+// function objToKeys(enterArrayOfObjects = []) {
+//     let returnArr = [];
+//     for (const enterArrayOfObject of enterArrayOfObjects) {
+//         for (let enterArrayOfObjectsKey in enterArrayOfObject) {
+//             returnArr.push(enterArrayOfObjectsKey)
+//         }
+//     }return returnArr
+// }
+// console.log(objToKeys(arrObj))
+//вроді код працює, тільки неможу зрозуміти чого показує таку помилку 'Possible iteration over unexpected
+// (custom / inherited) members, probably missing hasOwnProperty check' і як її зафіксити
+
+//
 // for (const arrObjElement of arrObj) {
 //     for (let arrObjElementKey in arrObjElement) {
 //         console.log(arrObjElementKey)
@@ -119,19 +121,123 @@ console.log(objToKeys(arrObj))
 // 10) Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 // [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+
+// let arrObj = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+//
+// function returnValues(arrayOfObjects = []) {
+//     let arrOfValuesArr = [];
+//     let arrOfvalues = [];
+//     let value;
+//     for (const arrObjElement of arrayOfObjects) {
+//         arrOfValuesArr.push(Object.values(arrObjElement))
+//     }
+//     for (const arrOfValue of arrOfValuesArr) {
+//         for (let arrOfValueElement of arrOfValue) {
+//             value = arrOfValueElement;
+//             arrOfvalues.push(value)
+//         }
+//     }
+// return arrOfvalues
+// }
+// let values = returnValues(arrObj)
+// console.log(values)// завдання то вирішив, але точно є якийсь простіший спосіб це зробити, бо не знаю як напряму
+//достукатись до значень обєкта, для мене це перебирання значень обєкту якась абракадабра
+
+
+// let arrOfValuesArr = [];
+// let arrOfvalues = [];
+// let a;
+// for (const arrObjElement of arrObj) {
+//     arrOfValuesArr.push(Object.values(arrObjElement))
+// }
+// for (const arrOfValue of arrOfValuesArr) {
+//     for (let arrOfValueElement of arrOfValue) {
+//         a = arrOfValueElement;
+//         arrOfvalues.push(a)
+//     }
+// }console.log(arrOfvalues)
+
+
 // 11) створити функцію  яка скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
 //   EXAMPLE:
 //   [1,2,3,4]
 //   [2,3,4,5]
 //   результат
 //   [3,5,7,9]
+// const arr1 = [1, 2, 3, 4];
+// const arr2 = [2, 3, 4, 5];
+
+// function summing(array1 = [], array2 = []){
+//     let arr3 = [];
+//     for (let i = 0; i < array1.length; i++) {
+//         let arr3Element = array1[i] + array2[i];
+//         arr3.push(arr3Element)
+//     }return arr3
+// }
+// let arr3 = summing(arr1,arr2);
+// console.log(arr3)
+
+
+// let arr3 = [];
+// if (arr1.length > arr2.length) {
+//     for (let i = 0; i < arr1.length; i++) {
+//         if (typeof arr2[i] === 'number') {
+//             let arr3Element = arr1[i] + (arr2[i]);
+//             arr3.push(arr3Element);
+//         } else {
+//             arr2[i] = 0;
+//             let arr3Element = arr1[i] + (arr2[i]);
+//             arr3.push(arr3Element);
+//         }
+//     }
+// }else{
+//     for (let i = 0; i < arr2.length; i++) {
+//         if (typeof arr1[i] === 'number') {
+//             let arr3Element = arr1[i] + (arr2[i]);
+//             arr3.push(arr3Element);
+//         } else {
+//             arr1[i] = 0;
+//             let arr3Element = arr1[i] + (arr2[i]);
+//             arr3.push(arr3Element);
+//         }
+//     }
+// }
+// console.log(arr3)
+
+
 //
 //
 // ============================================================================================
 //
-// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше
+// (Math використовувати заборонено);
+
+// function returnMinConsoleMax() {
+//     let maxNum = arguments[0];
+//     for (let i = 1; i < arguments.length; i++) {
+//         if (maxNum < arguments[i]) {
+//             maxNum = arguments[i]
+//         }
+//     }console.log(maxNum)
+//     let minNum = arguments[0];
+//     for (let i = 1; i < arguments.length; i++) {
+//         if (minNum > arguments[i]){
+//             minNum = arguments[i]
+//         }
+//     }return minNum
+// }
+//
+// let rMCM = returnMinConsoleMax(-99999999, 4, 5, 6, -9, 4, 3, 323, 43, 999, -2, 10100, -1, -3, -4, -6, 100, -134)
+// console.log(rMCM)
+
 // - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
 //   Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
+
+
+
+
+
+
 // - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
