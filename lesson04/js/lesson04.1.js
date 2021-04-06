@@ -239,25 +239,30 @@
 //         }
 //     }return minNum
 // }
-//
-function returnMinConsoleMax() {
-    let startNum = arguments[0];
-    let maxNum;
-    let minNum;
-    for (let i = 1; i < arguments.length; i++) {
-        if (maxNum < arguments[i]) {
-            maxNum = arguments[i]
-        }
-    }console.log(maxNum)
-    minNum = arguments[0];
-    for (let i = 1; i < arguments.length; i++) {
-        if (minNum > arguments[i]){
-            minNum = arguments[i]
-        }
-    }return minNum
-}
 // let rMCM = returnMinConsoleMax(-99999999, 4, 5, 6, -9, 4, 3, 323, 43, 999, -2, 10100, -1, -3, -4, -6, 100, -134)
 // console.log(rMCM)
+//
+// function returnMinConsoleMax2() {
+//     let maxNum;
+//     let minNum;
+//     for (let i = 0; i < arguments.length; i++) {
+//         if (arguments[i]>arguments[i+1] &&typeof maxNum === 'undefined' && typeof minNum=== 'undefined') {
+//             maxNum = arguments[i];
+//             minNum = arguments[i+1];
+//         }else if (arguments[i]<arguments[i+1] &&typeof maxNum === 'undefined' && typeof minNum=== 'undefined'){
+//             maxNum = arguments[i+1];
+//             minNum = arguments[i];
+//         } else {
+//             if (arguments[i] >= maxNum){
+//                 maxNum=arguments[i]
+//             } else if (arguments[i]<= minNum){
+//                 minNum=arguments[i]}
+//         }
+//     }console.log(maxNum)
+//     return minNum
+// }
+// let rMCM2 = returnMinConsoleMax2(-99999999, 4, 5, 6, -9, 4, 3, 323, 43, 999, -2, 10100, -1, -3, -4, -6, 100, -134)
+// console.log(rMCM2)
 
 // - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
 //   Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
