@@ -67,8 +67,20 @@
 //         }
 //     }return min
 // }
-// let arrNum = [23, 323, 43434, 43439, 2323, 23232, 4435, 5434, 3, 0, -3];
+// let arrNum = [23, 323, -9,43434, 43439, 2323, 23232, 4435, 5434, 3, 0, -3];
 // console.log(minNum(arrNum))
+
+// function minNum(array=[]){
+//     let min = array[0]
+//     for (let i = 1; i < array.length; i++) {
+//         if (min > array[i]){
+//             min = array[i];
+//         }
+//     }return min
+// }
+// let arrNum = [23, 323, 43434, 43439, -2, 2323, 23232, 4435,-3, 5434, 3, 0, -9];
+// console.log(minNum(arrNum))
+
 
 // // 7) створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його.
 // let arrNum = [12, -12, 45, 0, 17, -17, 23, -23, 0];
@@ -228,6 +240,22 @@
 //     }return minNum
 // }
 //
+function returnMinConsoleMax() {
+    let startNum = arguments[0];
+    let maxNum;
+    let minNum;
+    for (let i = 1; i < arguments.length; i++) {
+        if (maxNum < arguments[i]) {
+            maxNum = arguments[i]
+        }
+    }console.log(maxNum)
+    minNum = arguments[0];
+    for (let i = 1; i < arguments.length; i++) {
+        if (minNum > arguments[i]){
+            minNum = arguments[i]
+        }
+    }return minNum
+}
 // let rMCM = returnMinConsoleMax(-99999999, 4, 5, 6, -9, 4, 3, 323, 43, 999, -2, 10100, -1, -3, -4, -6, 100, -134)
 // console.log(rMCM)
 
@@ -342,16 +370,35 @@
 //     name = normName.join(' ');
 //     return name
 // }
+
+
+// function normalizator2V0 (name){
+//     let normName = name.split(' ');
+//     name = [];
+//     for (let i = 0; i < normName.length; i++) {
+//         if (normName[i]!==''){
+//             name.push(normName[i]);
+//         }
+//     }normName = name.join(' ');
+//     return normName
+// }
 // console.log(normalizator(n1));
 // console.log(normalizator(n2));
 // console.log(normalizator(n3));
+// console.log(normalizator2V0(n1));
+// console.log(normalizator2V0(n2));
+// console.log(normalizator2V0(n3));
 
 
-// let harry = n1.trim();
-// n1 =harry.split(' ')
-// harry = [n1[0],n1[n1.length-1]]
-// n1 = harry.join(' ')
-// console.log(n1)
+// let harry = n1.split(' ');
+// n1 = [];
+// for (let i=0; i<harry.length;i++){
+//     if (harry[i]!==''){
+//         n1.push(harry[i]);
+//     }
+// }
+// harry = n1.join(' ');
+// console.log(harry)
 
 // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
 // let n1 = 'Harry Potter'
