@@ -2,9 +2,8 @@
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Word', [9,6,1], ['oops'], 9] -> [1, 3, 'Hello, 'Word', 9, 6, 1, 'oops', 9]
 
-
 // let mixedArr = [1, 3, ['Hello', 'Word', [9, 6, 1]], ['oops'], 9];
-//
+
 // function flattering(multiLevelArray = []){
 //     let normArray = [];
 // let n;
@@ -27,7 +26,8 @@
 // return normArray
 // }
 // console.log(flattering(mixedArr))
-//
+
+
 // function straightener(multiLevelArray = []){
 //     let normArray = [];
 // let n;
@@ -50,8 +50,8 @@
 // return normArray
 // }
 // console.log(straightener(mixedArr))
-//
-//
+
+
 // let multiLevelArray = [1, 3, ['Hello', 'Word', [9, 6, 1]], ['oops'], 9];
 // let normArray = [];
 // let n;
