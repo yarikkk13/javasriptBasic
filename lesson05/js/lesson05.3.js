@@ -40,20 +40,29 @@
 //         console.log(this)
 //     }
 // }
-// function CreateTag(name, specification, atr){
+// function CreateTag(name, action, atr){
 //     this.name = name;
-//     this.specification = specification;
+//     this.action = action;
 //     this.atr = atr;
 //
 //     this.description = function (){
 //         console.log(this)
 //     }
-// }const atr1 = new CreateAtr('accesskey', 'Активация ссылки с помощью комбинации клавиш');
-// const atr2 = new CreateAtr('coords', 'Устанавливает координаты активной области');
-// const atr3 = new CreateAtr('download', 'Предлагает скачать указанный по ссылке файл');
-// const spec = 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок'
-// const a = new CreateTag('<a>',spec,[atr1,atr2,atr3])
+// }
+// const atrA1 = new CreateAtr('accesskey', 'Активация ссылки с помощью комбинации клавиш');
+// const atrA2 = new CreateAtr('coords', 'Устанавливает координаты активной области');
+// const atrA3 = new CreateAtr('download', 'Предлагает скачать указанный по ссылке файл');
+// const tagA = 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок'
+// const a = new CreateTag('<a>',tagA,[atrA1,atrA2,atrA3])
 // a.description()
+// //  -div
+// const atrDiv1 = new CreateAtr('align','Задает выравнивание содержимого тега <div>.');
+// const atrDiv2 = new CreateAtr('title','Добавляет всплывающую подсказку к содержимому.');
+// const tagDiv = 'Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа'+
+//     'с целью изменения вида содержимого.'
+// const div = new CreateTag('<div>',tagDiv,[atrDiv1,atrDiv2]);
+// console.table(div)
+
 
 
 // -  Створити класс  для об'єкту який описує теги
@@ -150,12 +159,16 @@
 //     },
 //     addDriver(newDriver){
 //         this.driver = newDriver
+//     },
+//     changeYear(newYear){
+//         this.year=newYear
 //     }
 // }
 // car.info()
 // car.drive()
 // car.increseMaxSpeed(350)
 // car.addDriver({name:'Taras', age: 23})
+// car.changeYear(2012)
 // car.info()
 // console.log(car.driver)
 
