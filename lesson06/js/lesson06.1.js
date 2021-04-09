@@ -152,22 +152,39 @@
 // })
 // console.log(map)
 // console.log(users)
+//
+// let usersWithId = users.reduce((acc, value, index) => {
+//     const obj = JSON.parse(JSON.stringify(value));
+//     obj.id = index + 1
+//     acc.push(obj)
+//     return acc
+// },[])
+// console.log(usersWithId)
+// console.log(users)
 
 // d) відсортувати його за індентифікатором
 //
-// let newSort = newArr.sort((a, b) => {
+// let newSort = usersWithId.sort((a, b) => {
 //     if(a.id<b.id){
 //         return 1
 //     }return -1
 // })
 // console.log(newSort)
 
-
 // e) Всі хто одружений мають попасти у новий масив та отрмати квартиру (reduce)
-// let getFlat = users.reduce((acc, value) => {
+// let getFlatOld = users.reduce((acc, value) => {
 //     if (value.isMarried === true) {
 //         value.flat = true;
 //         acc.push(value)
+//     }
+//     return acc
+// },[])
+//
+// let getFlat = users.reduce((acc, value) => {
+//     const obj = JSON.parse(JSON.stringify(value))
+//     if (value.isMarried === true) {
+//         obj.flat = true;
+//         acc.push(obj)
 //     }
 //     return acc
 // },[])
