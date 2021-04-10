@@ -73,3 +73,21 @@
 // }
 // multiLevelArray = normArray;
 // console.log(multiLevelArray)
+
+
+
+
+// function rekursator(arrToIt, i = 0, obj = {}) {
+//     console.log(arrToIt[i]);
+//     console.log(i);
+//     console.log('_______')
+//     if (i < arrToIt.length - 1) {
+//         obj[i] = arrToIt[i];
+//         return rekursator(arrToIt, ++i, obj)
+//     }
+//     return obj
+// }
+//
+// let arr = [43, 323, 32, 65, 879, 323, 54, 5, 2]
+// let objMaker = rekursator(arr)
+// console.log(objMaker)
