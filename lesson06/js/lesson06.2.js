@@ -131,30 +131,123 @@
 
 
 // - взять слдующий массив
-// const usersWithAddress = [
-//    {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
-//    {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
-//    {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
-//    {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
-//    {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
-//    {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
-//    {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
-//    {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
-//    {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
-//    {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
-//    {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
-// ];
-//
-// -- Відсортувати їх по ID
-// -- Відсортувати їх по ID в зворотньому порядку
-// -- Відсортувати по віку
-// -- Відсортувати по віку в зворотньому порядку
-// -- Відсорутвати по імені
-// -- Відсорутвати по назві вулиці
+const usersWithAddress = [
+   {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
+   {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
+   {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
+   {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
+   {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
+   {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
+   {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
+   {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
+   {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
+   {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
+   {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
+];
+
+// // -- Відсортувати їх по ID
+// let byId = usersWithAddress.sort((a, b) => {
+//     if (a.id>b.id){
+//         return 1
+//     } return -1
+// })
+// console.log(byId)
+
+// // -- Відсортувати їх по ID в зворотньому порядку
+// let byIdReverse = usersWithAddress.sort((a, b) => {
+//     if (a.id<b.id){
+//         return 1
+//     } return -1
+// })
+// console.log(byIdReverse)
+
+// // -- Відсортувати по віку
+// let byAge = usersWithAddress.sort((a, b) => {
+//     if (a.age>b.age){
+//         return 1
+//     } return -1
+// })
+// console.log(byAge)
+
+// // -- Відсортувати по віку в зворотньому порядку
+// let byAgeReverse = usersWithAddress.sort((a, b) => {
+//     if (a.age<b.age){
+//         return 1
+//     } return -1
+// })
+// console.log(byAgeReverse)
+
+// // -- Відсорутвати по імені
+// let byName = usersWithAddress.sort((a, b) => {
+//     if (a.name>b.name){
+//         return 1
+//     } return -1
+// })
+// console.log(byName)
+
+// // -- Відсорутвати по назві вулиці
+// let byAdress = usersWithAddress.sort((a, b) => {
+//     if (a.address.street>b.address.street){
+//         return 1
+//     } return -1
+// })
+// console.log(byAdress)
+
 // -- Відсорутвати по номеру будинку
-// -- Залигити тільки тих, хто молодший ніж 30 (filter)
-// -- Залишити тільки одружених
-// -- Залишити тільки одружених, які молодні за 30
-// -- Залишити лише тих, в кого парні номери будинків.
-// -- Порахувати загальний вік всіх людей. (reduce)
-// -- Ті, хто одружений і старий за 30 має отримати обєкти child і попасти в новий масив (reduce)
+// let byAdrNum = usersWithAddress.sort((a, b) => {
+//     if (a.address.number>b.address.number){
+//         return 1
+//     } return -1
+// })
+// console.log(byAdrNum)
+
+// // -- Залигити тільки тих, хто молодший ніж 30 (filter)
+// let younger30 = usersWithAddress.filter(value => {
+//     if (value.age<30){
+//         console.log(value)
+//         return value
+//     }
+// })
+// console.log(younger30);
+
+// // -- Залишити тільки одружених
+// let married = usersWithAddress.filter(value => {
+//     if (value.isMarried === true){
+//         console.log(value)
+//         return value
+//     }
+// })
+// console.log(married);
+
+// // -- Залишити тільки одружених, які молодні за 30
+// let marriedYoung = usersWithAddress.filter(value => {
+//     if (value.isMarried === true && value.age<30){
+//         console.log(value)
+//         return value
+//     }
+// })
+// console.log(marriedYoung);
+
+// // -- Залишити лише тих, в кого парні номери будинків.
+// let numHouseParity = usersWithAddress.filter(value => {
+//     if (value.address.number%2 === 0){
+//         console.log(value)
+//         return value
+//     }
+// })
+// console.log(numHouseParity);
+
+// // -- Порахувати загальний вік всіх людей. (reduce)
+// let sumOfage = usersWithAddress.reduce((acc, value) => {
+//     acc = acc + value.age;
+//     return acc
+// }, 0)
+// console.log(sumOfage)
+
+// // -- Ті, хто одружений і старий за 30 має отримати обєкти child і попасти в новий масив (reduce)
+// let marriedOldGetChild = usersWithAddress.reduce((acc, value) => {
+//     if (value.age>30 && value.isMarried === true){
+//         acc.push(value)}
+//     return acc
+// },[])
+// console.log(marriedOldGetChild)
