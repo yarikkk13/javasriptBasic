@@ -117,3 +117,44 @@
 // Answer: MinIndex = 0, MaxIndex = 0.
 // 2. Key = 4
 // Answer: MinIndex = 3, MaxIndex = 6.
+
+// arrNum = [1, 2, 3, 4, 4, 4, 4, 7, 7, 9, 9, 10];
+// let num = +prompt('Введіть число: ');
+
+// let min;
+// let max;
+// function minMaxIndex(array) {
+//     min = array.indexOf(num);
+//     max = array.lastIndexOf(num);
+//     if (min === -1) {
+//         return min
+//     }
+//     return [min, max]
+// }
+//
+// console.log(minMaxIndex(arrNum));
+// console.log(min);
+// console.log(max);
+// console.log('__________')
+
+
+// let minimalIndex = arrNum.findIndex((value, index) => {
+//     if (value === num) {
+//         return index
+//     }
+// });
+// console.log(minimalIndex)
+// console.log('___________')//    тут лише шукає менший індекс
+
+// let maxMinIndex = arrNum.reduce((acc, value, i) => {
+//     if(value === num){
+//         acc.push(i);
+//     }
+//     return acc
+// },[])
+// console.log('___________')
+// console.log(maxMinIndex)
+// let maxIndex = maxMinIndex[maxMinIndex.length-1];
+// let minIndex = maxMinIndex[0];
+// console.log(minIndex);
+// console.log(maxIndex)//         тут якщо вводити через промпт чмсло якого немає в масиві, то виводиться пустий масив
