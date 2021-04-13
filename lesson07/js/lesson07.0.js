@@ -82,22 +82,7 @@
 // }
 
 
-// let red = document.getElementById('red');
-// let green = document.getElementById('green');
-// let blue = document.getElementById('blue');
 //
-// red.onclick = (ev) => {
-//   ev.stopPropagation();
-//   console.log('RED')
-// }
-// green.onclick = (ev) => {
-//   ev.stopPropagation();
-//   console.log('green')
-// }
-// blue.onclick = (ev) => {
-//   ev.stopPropagation();
-//   console.log('blue')
-// }
 
 //
 // red.addEventListener('click', (ev) => {

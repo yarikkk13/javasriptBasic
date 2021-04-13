@@ -1,12 +1,44 @@
-// - Создать произвольный елемент с id = text. Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал
-//   элемент с id="text".
+// // - Создать произвольный елемент с id = text. Используя JavaScript, сделайте так,
+// //   чтобы при клике на кнопку исчезал элемент с id="text".
+// let el = document.getElementById('text');
+// let bttn = document.getElementById('form')
+// bttn.onclick = (ev) => {
+//     ev.preventDefault()
+//     console.log('hello')
+//     // el.removeAttribute('id')
+//     el.remove()
+// }
+
+// // - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
+// let bttn = document.getElementById('form')
+// bttn.onclick = (ev) => {
+//     ev.preventDefault()
+//     bttn.remove()
+// }
+
+// // - Створити інпут який приймає вік людини та кнопку яка підтверджує дію.
+// //   При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити
+// //   про це користувача
 //
-// - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
+// let arr = document.querySelector('form')
+// let [inPut , bttn] = arr;
+// // console.log(arr)
+// // console.log(inPut)
+// // console.log(bttn)
+// // inPut.oninput = () => {
+// //     console.log(inPut.value)
+// // }
 //
-// - Створити інпут який приймає вік людини та кнопку яка підтверджує дію.
-//   При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити
-//   про це користувача
+// bttn.onclick = (ev) =>{
+//     // ev.preventDefault();
+//     // if (inPut.value>=18){
+//     //     alert('Welcome')
+//     // }else {alert('Тобі менше 18')}
+//     alert(`You are ${inPut.value} years old!`)
 //
+// }
+
+
 // - Создайте меню, которое раскрывается/сворачивается при клике
 //
 // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
