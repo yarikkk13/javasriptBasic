@@ -1,0 +1,56 @@
+.main {
+    position: relative;
+    margin: 100px auto;
+    background: gray;
+    width: 450px;
+    height: 150px;
+    border-radius: 15px;
+    padding: 10px 45px;
+
+}
+
+.arrow {
+    position: absolute;
+    font-size: 30px;
+    top: 60px;
+    display: block;
+    border-radius: 5px;
+
+}
+.arrow:focus{
+    outline: none;
+}
+.arrow:hover{
+    color: #660004;
+    cursor: all-scroll;
+}
+
+.gal {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+.img {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 9999px;
+    list-style: none;
+
+}
+
+.img li {
+    display: inline-block;
+    margin-right: -4px;
+    transition: margin-left 250ms;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+
+}
