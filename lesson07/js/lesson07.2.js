@@ -39,54 +39,54 @@
 // }
 
 // // -- взять массив пользователей
-const usersWithAddress = [
-    {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
-    {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
-    {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
-    {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
-    {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
-    {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
-    {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
-    {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
-    {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
-    {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
-    {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
-];
-const single = document.getElementById('isSingle');
-const older29 = document.getElementById('olderThan29');
-const cityKyiv = document.getElementById('cityKyiv');
-const btn = document.getElementById('btn2');
-btn.onclick = ev => {
-    let filtered;
-    if (single.checked === false && older29.checked === false && cityKyiv.checked === false) {
-        filtered = usersWithAddress
-    } else if (single.checked === true && older29.checked === false && cityKyiv.checked === false) {
-        filtered = usersWithAddress.filter(value => {
-            return value.isMarried === false
-        })
-    } else if (single.checked === false && older29.checked === true && cityKyiv.checked === false) {
-        filtered = usersWithAddress.filter(value => {
-            return value.age >= 29
-        })
-    } else if (single.checked === true && older29.checked === true && cityKyiv.checked === false) {
-        filtered = usersWithAddress.filter(value => {
-            return value.age >= 29 && value.isMarried === false
-        })
-    } else if (single.checked === false && older29.checked === false && cityKyiv.checked === true) {
-        filtered = usersWithAddress.filter(value => {
-            return value.address.city === 'Kyiv'
-        })
-    } else if (single.checked === true && older29.checked === false && cityKyiv.checked === true) {
-        filtered = usersWithAddress.filter(value => {
-            return value.address.city === 'Kyiv' && value.isMarried === false
-        })
-    } else if (single.checked === true && older29.checked === true && cityKyiv.checked === true) {
-        filtered = usersWithAddress.filter(value => {
-            return value.address.city === 'Kyiv' && value.isMarried === false && value.age >= 29
-        })
-    }
-    document.write(JSON.stringify(filtered))
-}
+// const usersWithAddress = [
+//     {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
+//     {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
+//     {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
+//     {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
+//     {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
+//     {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
+//     {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
+//     {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
+//     {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
+//     {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
+//     {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
+// ];
+// const single = document.getElementById('isSingle');
+// const older29 = document.getElementById('olderThan29');
+// const cityKyiv = document.getElementById('cityKyiv');
+// const btn = document.getElementById('btn2');
+// btn.onclick = ev => {
+//     let filtered;
+//     if (single.checked === false && older29.checked === false && cityKyiv.checked === false) {
+//         filtered = usersWithAddress
+//     } else if (single.checked === true && older29.checked === false && cityKyiv.checked === false) {
+//         filtered = usersWithAddress.filter(value => {
+//             return value.isMarried === false
+//         })
+//     } else if (single.checked === false && older29.checked === true && cityKyiv.checked === false) {
+//         filtered = usersWithAddress.filter(value => {
+//             return value.age >= 29
+//         })
+//     } else if (single.checked === true && older29.checked === true && cityKyiv.checked === false) {
+//         filtered = usersWithAddress.filter(value => {
+//             return value.age >= 29 && value.isMarried === false
+//         })
+//     } else if (single.checked === false && older29.checked === false && cityKyiv.checked === true) {
+//         filtered = usersWithAddress.filter(value => {
+//             return value.address.city === 'Kyiv'
+//         })
+//     } else if (single.checked === true && older29.checked === false && cityKyiv.checked === true) {
+//         filtered = usersWithAddress.filter(value => {
+//             return value.address.city === 'Kyiv' && value.isMarried === false
+//         })
+//     } else if (single.checked === true && older29.checked === true && cityKyiv.checked === true) {
+//         filtered = usersWithAddress.filter(value => {
+//             return value.address.city === 'Kyiv' && value.isMarried === false && value.age >= 29
+//         })
+//     }
+//     document.write(JSON.stringify(filtered))
+// }
 //
 // // let filterStatus = usersWithAddress.filter(value => {
 // //     return value.isMarried === false
