@@ -5,10 +5,65 @@
     <title>lesson08.1</title>
 </head>
 <body>
-<label>
-    <textarea name="firstTextarea" rows="15" cols="120"
+<div>
+    <label>
+    <textarea name="firstTextarea" rows="10" cols="80"
               placeholder="write something here and it will be saved, even after restart"></textarea>
-</label>
+    </label>
+</div>
+<div id='secondTask'>
+    <form id="formInfo">
+        <div id="generalInfo">
+            <label>
+                <input type="text" id="name" placeholder="name" name="name" class="fulfill">
+                <input type="text" id="lastName" placeholder="lastName" name="lastName" class="fulfill">
+                <input type="text" id="education" placeholder="education" name="education" class="fulfill">
+                <input type="text" id="age" placeholder="age" name="age" class="fulfill">
+            </label>
+        </div>
+        <div id="genderIsMarried">
+            <label for="male">Man<input type="radio" name="gender" id="male" value="male" class="fulfill"></label>
+            <label for="female">Woman<input type="radio" name="gender" id="female" value="female"
+                                            class="fulfill"></label>
+            <label for="isMarried">Married <input type="checkbox" id="isMarried" class="fulfill"
+                                                  name="isMarried"></label>
+        </div>
+        <div id="aboutYourself">
+            <label> <textarea id="secondTextArea" rows="7" cols="60" placeholder="tell about yourself"
+                              class="fulfill" name="secondText"></textarea>
+            </label>
+        </div>
+    </form>
+</div>
+<div id='thirdTask'>
+    <button type="button" name="back" id="back">Back</button>
+    <button type="button" name="forward" id="forward">Forward</button>
+    <br>
+    <label> <textarea id="thirdTextArea" rows="5" cols="40" placeholder="type here then tap save"></textarea></label>
+    <button type="button" name="save" id="save">Save</button>
+</div>
+
+<div id="fourthTask">
+    <button type="button" name="back" id="back4">Back</button>
+    <button type="button" name="forward" id="forward4">Forward</button>
+    <form id="fourthTaskForm">
+        <label>
+            <input type="text" id="pib" placeholder="pib" name="pib" class="fulfill4">
+            <br>
+            <input type="text" id="phone" placeholder="phone" name="phone" class="fulfill4">
+            <br>
+            <input type="text" id="email" placeholder="email" name="email" class="fulfill4">
+            <br>
+            <input type="text" id="job" placeholder="job" name="job" class="fulfill4">
+            <br>
+            <input type="text" id="birthday" placeholder="birthday" name="birthday" class="fulfill4">
+            <br>
+        </label>
+    </form>
+    <button type="button" name="saveIt" id="saveIt">save</button>
+    <button type="button" name="delete" id="delete">edit</button>
+</div>
+
 <script src="js/lesson08.1.js"></script>
 </body>
 </html>
