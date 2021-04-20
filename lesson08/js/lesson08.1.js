@@ -108,7 +108,7 @@ if (!localStorage.getItem(myCards)) {
     localStorage.setItem(myCards, JSON.stringify([]))
 }
 
-let inputterData = (obj, target) => {
+let inputData = (obj, target) => {
     console.log(target)
     for (let targetElement of target) {
         targetElement.value = obj[targetElement.name]
@@ -139,7 +139,7 @@ myBack.onclick = () => {
         i = array.length - 1
     }
     let obj = array[i];
-    inputterData(obj, myEls)
+    inputData(obj, myEls)
 }
 
 myForward.onclick = () => {
@@ -150,5 +150,5 @@ myForward.onclick = () => {
         i = 0
     }
     let obj = array[i]
-    inputterData(obj, myEls)
+    inputData(obj, myEls)
 }
