@@ -106,33 +106,66 @@
 // }
 
 
-// - Реализуйте записную книгу, хранящую данные в локальном хранилище.
-//   Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения
-//   Данные вводить через соответсвующую форму.
-// --Каждому контакту добавить кнопку для удаления контакта.
-// --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть
-//   все необходимые инпуты для редактирования, которые уже заполнены данными объекта
-
-
-let mySave = document.getElementById('saveIt')
-let myEls = document.getElementById('fourthTaskForm')
-let myCards = 'myCards'
-console.log(mySave)
-console.log(myEls)
-if(!localStorage.getItem(myCards)){
-    localStorage.setItem(myCards,JSON.stringify([]))
-}
-
-myEls.oninput = ({target: {name, value}})=> {
-    localStorage.setItem(name,value)
-}
-
-mySave.onclick = ()=>{
-    let obj = {};
-    for (let myEl of myEls) {
-        obj[myEl.name] = myEl.value
-    }
-    let array = JSON.parse(localStorage.getItem(myCards))
-    array.push(obj)
-    localStorage.setItem(myCards,JSON.stringify(array))
-}
+// // - Реализуйте записную книгу, хранящую данные в локальном хранилище.
+// //   Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения
+// //   Данные вводить через соответсвующую форму.
+// // --Каждому контакту добавить кнопку для удаления контакта.
+// // --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть
+// //   все необходимые инпуты для редактирования, которые уже заполнены данными объекта
+//
+//
+// let mySave = document.getElementById('saveIt')
+// let myEls = document.getElementById('fourthTaskForm')
+// let myBack = document.getElementById('back4')
+// let myForward = document.getElementById('forward4')
+// let myCards = 'myCards'
+// let i = 0;
+//
+// if (!localStorage.getItem(myCards)) {
+//     localStorage.setItem(myCards, JSON.stringify([]))
+// }
+//
+// let inputterData = (obj, target) => {
+//     console.log(target)
+//     for (let targetElement of target) {
+//         targetElement.value = obj[targetElement.name]
+//     }
+// }
+//
+//
+// // myEls.oninput = ({target: {name, value}}) => {
+// //     localStorage.setItem(name, value)
+// // }
+//
+// mySave.onclick = () => {
+//     let obj = {};
+//     for (let myEl of myEls) {
+//         obj[myEl.name] = myEl.value
+//     }
+//     let array = JSON.parse(localStorage.getItem(myCards))
+//     array.push(obj)
+//     localStorage.setItem(myCards, JSON.stringify(array))
+//     i++
+// }
+//
+// myBack.onclick = () => {
+//     let array = JSON.parse(localStorage.getItem(myCards))
+//     if (i - 1 >= 0) {
+//         i--
+//     } else {
+//         i = array.length - 1
+//     }
+//     let obj = array[i];
+//     inputterData(obj, myEls)
+// }
+//
+// myForward.onclick = () => {
+//     let array = JSON.parse(localStorage.getItem(myCards))
+//     if (i + 1 < array.length) {
+//         i++
+//     } else {
+//         i = 0
+//     }
+//     let obj = array[i]
+//     inputterData(obj, myEls)
+// }
