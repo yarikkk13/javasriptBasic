@@ -124,7 +124,7 @@ console.log('hello world')
 // })
 
 
-// Reusable code
+// Reusable strings of code
 //
 // wakeUp(true, (err, time) => {
 //     if (!err) {
@@ -298,6 +298,9 @@ console.log('hello world')
 //     })
 //     .catch(reason => {
 //         console.warn(reason)
+//     })
+//     .finally(()=>{
+//         console.log('finally we done it!')
 //     })
 
 
