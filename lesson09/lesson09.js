@@ -124,7 +124,7 @@ console.log('hello world')
 // })
 
 
-// Reusable strings of code
+// Reusable strings of code (do not uncomment)
 //
 // wakeUp(true, (err, time) => {
 //     if (!err) {
@@ -304,4 +304,106 @@ console.log('hello world')
 //     })
 
 
-// 3. async await
+// // 3. async await
+//
+// function wakeUp(wokeUp) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (wokeUp) {
+//                 resolve(8);
+//             } else {
+//                 reject('u are late')
+//             }
+//         }, 8000)
+//     })
+// }
+//
+// function brushTeeth(time) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (time === 8) {
+//                 resolve(8.15);
+//             } else {
+//                 reject('ur teeth are not brushed')
+//             }
+//         }, 500)
+//     })
+// }
+//
+// function eating(time) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (time === 8.15) {
+//                 resolve(8.35);
+//             } else {
+//                 reject('u are hungry')
+//             }
+//         }, 700)
+//     })
+// }
+//
+// function driving(time) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (time === 8.35) {
+//                 resolve(9.00);
+//             } else {
+//                 reject('u are late on job')
+//             }
+//         }, 750)
+//     })
+// }
+//
+// function jobIsDone(time) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (time === 9) {
+//                 resolve(300);
+//             } else {
+//                 reject('u re job is not done')
+//             }
+//         }, 6000)
+//     })
+// }
+//
+// function shopping(money) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (money >= 300) {
+//                 resolve(money - 30);
+//             } else {
+//                 reject('not enough money')
+//             }
+//         }, 300)
+//     })
+// }
+//
+// function driveHome(money) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (money > 50) {
+//                 resolve(19.00);
+//             } else {
+//                 reject('u cant get home')
+//             }
+//         }, 850)
+//     })
+// }
+//
+// async function howToGetHome() {
+//     try {
+//         let time = await wakeUp(true)
+//         time = await brushTeeth(time)
+//         time = await eating(time)
+//         time = await driving(time)
+//         let money = await jobIsDone(time)
+//         money = await shopping(money)
+//         time = await driveHome(money)
+//         console.log(`you're at home at ${time} pm and have ${money} UAH`)
+//         return time
+//     } catch (e) {
+//         console.warn(e)
+//     }
+// }
+//
+// howToGetHome().then(r => console.log(r))
