@@ -1,14 +1,19 @@
 // 1. Write a MongoDB query to display all the documents in the collection restaurants.
-//
-//
+db.getCollection('rest').find()
 // 2. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for
 // all the documents in the collection restaurant.
-//
-//
+db.getCollection('rest').find(
+    {},
+    {
+        restaurant_id: 1,
+        name: 1,
+        borough: 1,
+        cuisine: 1,
+        _id: 0
+    })
 // 3. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine,
 // but exclude the field _id for all the documents in the collection restaurant.
-//
-//
+
 // 4. Write a MongoDB query to display the fields restaurant_id, name, borough and zip code,
 // but exclude the field _id for all the documents in the collection restaurant.
 //
@@ -90,6 +95,17 @@
 // 24. Write a MongoDB query to find the restaurant Id, name, address and geographical location
 // for those restaurants where 2nd element of coord array contains a value which is more than 42 and upto 52..
 //
+db.getCollection('rest').aggregate(
+    {$match: {'address.coord.1': {$gt: 42, $lt: 52}}},
+    {
+        $group: {
+            _id: '$_id',
+            name: '$name'
+            // , address and geographical location
+
+        }
+    }
+)
 //
 // 25. Write a MongoDB query to arrange the name of the restaurants in ascending order along with all the columns.
 //
