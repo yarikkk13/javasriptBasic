@@ -1,7 +1,20 @@
-// 1. Write a MongoDB query to display all the documents in the collection restaurants.
+// 1. Write a MongoDB query to display all the documents
+// in the collection restaurants.
 db.getCollection('rest').find()
-// 2. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for
+// 2. Write a MongoDB query to display the fields
+// restaurant_id, name, borough and cuisine for
 // all the documents in the collection restaurant.
+db.getCollection('rest').find(
+    {},
+    {
+        restaurant_id: 1,
+        name: 1,
+        borough: 1,
+        cuisine: 1
+    })
+// 3. Write a MongoDB query to display the fields
+// restaurant_id, name, borough and cuisine,
+// but exclude the field _id for all the documents in the collection restaurant.
 db.getCollection('rest').find(
     {},
     {
@@ -11,9 +24,6 @@ db.getCollection('rest').find(
         cuisine: 1,
         _id: 0
     })
-// 3. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine,
-// but exclude the field _id for all the documents in the collection restaurant.
-
 // 4. Write a MongoDB query to display the fields restaurant_id, name, borough and zip code,
 // but exclude the field _id for all the documents in the collection restaurant.
 //
